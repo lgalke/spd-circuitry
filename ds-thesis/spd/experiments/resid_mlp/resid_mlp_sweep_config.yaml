@@ -1,0 +1,18 @@
+program: spd/experiments/resid_mlp/resid_mlp_decomposition.py
+method: grid
+metric:
+  name: total_loss
+  goal: minimize
+parameters:
+  seed:
+    values: [67]
+  importance_minimality_coeff:
+    values: [1e-5,1e-4,1e-3,1e-2,1e-6]
+  lr:
+    values: [2e-3]
+
+command:
+- ${env}
+- ${interpreter}
+- ${program}
+- spd/experiments/resid_mlp/resid_mlp_config.yaml

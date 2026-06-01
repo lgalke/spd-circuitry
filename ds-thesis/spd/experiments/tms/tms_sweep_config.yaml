@@ -1,0 +1,15 @@
+program: spd/experiments/tms/tms_decomposition.py
+method: grid
+metric:
+  name: final_closeness
+  goal: minimize
+parameters:
+  seed:
+    values: [67]
+  importance_minimality_coeff:
+    values: [0.1,0.01,0.001,0.0001,0.00001,0.000001]
+command:
+- ${env}
+- ${interpreter}
+- ${program}
+- spd/experiments/tms/tms_config.yaml

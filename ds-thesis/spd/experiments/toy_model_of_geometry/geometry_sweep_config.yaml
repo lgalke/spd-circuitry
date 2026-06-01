@@ -1,0 +1,19 @@
+program: spd/experiments/toy_model_of_geometry/geometry_decomposition.py
+method: grid
+metric:
+  name: final_closeness
+  goal: minimize
+parameters:
+  seed:
+    values: [67]
+  C:
+    values: [50]
+  K:
+    values: [3,4,5,6,7,8]
+  importance_minimality_coeff:
+    values: [0.001]
+command:
+- ${env}
+- ${interpreter}
+- ${program}
+- spd/experiments/toy_model_of_geometry/geometry_config.yaml
