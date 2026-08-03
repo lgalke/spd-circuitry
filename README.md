@@ -1,5 +1,4 @@
-# Code Product for My Thesis
-
+# Code for Relational SPD and the Toy Model of Geometry
 
 ## Installation
 
